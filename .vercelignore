@@ -1,0 +1,8 @@
+.openai
+.wrangler
+dist
+worker
+build
+tests
+docs
+*.tsbuildinfo
