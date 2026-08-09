@@ -16,8 +16,8 @@ export async function generateMetadata(): Promise<Metadata> {
     description,
     applicationName: "Utham Kumar Portfolio",
     keywords: ["technology program management", "product leadership", "engineering delivery", "enterprise AI", "digital payments"],
-    openGraph: { title, description, type: "website", images: [{ url: `${origin}/og.png`, width: 1536, height: 1024, alt: "Utham Kumar technology leadership portfolio" }] },
-    twitter: { card: "summary_large_image", title, description, images: [`${origin}/og.png`] },
+    openGraph: { title, description, type: "website", images: [{ url: `${origin}/og.jpg`, width: 1536, height: 1024, alt: "Utham Kumar technology leadership portfolio" }] },
+    twitter: { card: "summary_large_image", title, description, images: [`${origin}/og.jpg`] },
   };
 }
 

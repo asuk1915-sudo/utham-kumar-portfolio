@@ -15,7 +15,7 @@
     "build:sites": "vinext build",
     "test": "node --test tests/rendered-html.test.mjs",
     "lint": "eslint . --ignore-pattern dist --ignore-pattern .next",
-    "typecheck": "tsc --noEmit",
+    "typecheck": "next typegen && tsc --noEmit",
     "check": "pnpm lint && pnpm typecheck && pnpm build && pnpm build:sites && pnpm test"
   },
   "dependencies": {
