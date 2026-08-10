@@ -31,7 +31,7 @@ export default function Home() {
           <span className="kicker">Technology program & product leadership</span>
           <h1>I build operating systems for <em>engineering organizations.</em></h1>
           <p>Two decades leading enterprise software delivery, AI-enabled platforms, secure digital payments, and large-scale cloud programs—connecting strategy to measurable execution.</p>
-          <div className="hero-actions"><a className="button primary" href="#work">Explore selected work</a><a className="button secondary" href="mailto:info@uthamkumar.com">Start a conversation</a></div>
+          <div className="hero-actions"><a className="button primary" href="#work">Explore selected work</a><a className="button secondary" href="mailto:info@uthamkumar.info">Start a conversation</a></div>
           <div className="hero-proof"><span><b>20+</b><small>Years across technology delivery</small></span><span><b>Global</b><small>Distributed teams & stakeholders</small></span><span><b>Atlanta</b><small>Based in Georgia, USA</small></span></div>
         </div>
         <div className="hero-visual" aria-hidden="true">
@@ -83,7 +83,7 @@ export default function Home() {
       </section>
 
       <section className="contact" id="contact">
-        <div className="section-shell"><span className="section-number">06 / CONTACT</span><h2>Let&apos;s make complex delivery<br />easier to see—and lead.</h2><p>For technology leadership, program transformation, industry conversations, and speaking inquiries.</p><div className="contact-links"><a href="mailto:info@uthamkumar.com">info@uthamkumar.com ↗</a><a href="https://www.linkedin.com/in/kumar1612/" target="_blank" rel="noreferrer">LinkedIn ↗</a><a href="https://medium.com/@asuk1915" target="_blank" rel="noreferrer">Medium ↗</a></div></div>
+        <div className="section-shell"><span className="section-number">06 / CONTACT</span><h2>Let&apos;s make complex delivery<br />easier to see—and lead.</h2><p>For technology leadership, program transformation, industry conversations, and speaking inquiries.</p><div className="contact-links"><a href="mailto:info@uthamkumar.info">info@uthamkumar.info ↗</a><a href="https://www.linkedin.com/in/kumar1612/" target="_blank" rel="noreferrer">LinkedIn ↗</a><a href="https://medium.com/@asuk1915" target="_blank" rel="noreferrer">Medium ↗</a></div></div>
       </section>
 
       <footer><div className="section-shell"><span>© 2026 Utham Kumar Anugula Sethupathy</span><span>Technology program & product leadership</span><a href="#top">Back to top ↑</a></div></footer>

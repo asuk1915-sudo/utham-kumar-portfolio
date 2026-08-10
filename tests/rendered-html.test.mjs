@@ -37,7 +37,7 @@ test("keeps the portfolio and deployment contract explicit", async () => {
     readFile(new URL("../docs/MIGRATION_AUDIT.md", import.meta.url), "utf8"),
   ]);
 
-  assert.match(page, /info@uthamkumar\.com/);
+  assert.match(page, /info@uthamkumar\.info/);
   assert.match(page, /linkedin\.com\/in\/kumar1612/);
   assert.match(page, /All data is synthetic/);
   assert.match(layout, /Technology Program & Product Leadership/);
