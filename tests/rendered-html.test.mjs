@@ -29,8 +29,9 @@ test("server-renders the leadership portfolio", async () => {
 });
 
 test("keeps the portfolio and deployment contract explicit", async () => {
-  const [page, layout, packageJson, vercelConfig, migrationAudit] = await Promise.all([
+  const [page, releaseCase, layout, packageJson, vercelConfig, migrationAudit] = await Promise.all([
     readFile(new URL("../app/page.tsx", import.meta.url), "utf8"),
+    readFile(new URL("../app/work/release-intelligence/page.tsx", import.meta.url), "utf8"),
     readFile(new URL("../app/layout.tsx", import.meta.url), "utf8"),
     readFile(new URL("../package.json", import.meta.url), "utf8"),
     readFile(new URL("../vercel.json", import.meta.url), "utf8"),
@@ -40,6 +41,7 @@ test("keeps the portfolio and deployment contract explicit", async () => {
   assert.match(page, /info@uthamkumar\.info/);
   assert.match(page, /linkedin\.com\/in\/kumar1612/);
   assert.match(page, /All data is synthetic/);
+  assert.match(releaseCase, /release-intelligence\.uthamkumar\.info/);
   assert.match(layout, /Technology Program & Product Leadership/);
   assert.match(packageJson, /"next": "16\.2\.6"/);
   assert.match(packageJson, /"node": "22\.x"/);
