@@ -23,7 +23,8 @@ test("server-renders the leadership portfolio", async () => {
   assert.match(html, /Utham Kumar/);
   assert.match(html, /Engineering Intelligence Lab/);
   assert.match(html, /Release Intelligence/);
-  assert.match(html, /operating systems for/);
+  assert.match(html, /confident execution/);
+  assert.match(html, /Ideas made tangible/);
   assert.match(html, /All data is synthetic/);
   assert.doesNotMatch(html, /Wix|Building your site|react-loading-skeleton/i);
 });
@@ -42,7 +43,7 @@ test("keeps the portfolio and deployment contract explicit", async () => {
   assert.match(page, /linkedin\.com\/in\/kumar1612/);
   assert.match(page, /All data is synthetic/);
   assert.match(releaseCase, /release-intelligence\.uthamkumar\.info/);
-  assert.match(layout, /Technology Program & Product Leadership/);
+  assert.match(layout, /Technology Program & Product Leader/);
   assert.match(packageJson, /"next": "16\.2\.6"/);
   assert.match(packageJson, /"node": "22\.x"/);
   assert.match(vercelConfig, /"framework": "nextjs"/);

@@ -2,22 +2,22 @@ import type { Metadata, Viewport } from "next";
 import { headers } from "next/headers";
 import "./globals.css";
 
-export const viewport: Viewport = { themeColor: "#10262d", colorScheme: "light" };
+export const viewport: Viewport = { themeColor: "#f4f1ea", colorScheme: "light" };
 
 export async function generateMetadata(): Promise<Metadata> {
   const requestHeaders = await headers();
   const host = requestHeaders.get("x-forwarded-host") ?? requestHeaders.get("host") ?? "localhost:3000";
   const protocol = requestHeaders.get("x-forwarded-proto") ?? (host.includes("localhost") ? "http" : "https");
   const origin = `${protocol}://${host}`;
-  const title = "Utham Kumar | Technology Program & Product Leadership";
-  const description = "Technology leadership portfolio spanning engineering delivery, enterprise AI, secure digital platforms, and large-scale program transformation.";
+  const title = "Utham Kumar | Technology Program & Product Leader";
+  const description = "The portfolio of Utham Kumar, a technology program and product leader working across engineering delivery, secure digital platforms, enterprise AI, and cloud transformation.";
   return {
     title,
     description,
     applicationName: "Utham Kumar Portfolio",
     keywords: ["technology program management", "product leadership", "engineering delivery", "enterprise AI", "digital payments"],
-    openGraph: { title, description, type: "website", images: [{ url: `${origin}/og.jpg`, width: 1536, height: 1024, alt: "Utham Kumar technology leadership portfolio" }] },
-    twitter: { card: "summary_large_image", title, description, images: [`${origin}/og.jpg`] },
+    openGraph: { title, description, type: "website", images: [{ url: `${origin}/og.png`, width: 1536, height: 1024, alt: "Utham Kumar, Technology Program and Product Leader" }] },
+    twitter: { card: "summary_large_image", title, description, images: [`${origin}/og.png`] },
   };
 }
 

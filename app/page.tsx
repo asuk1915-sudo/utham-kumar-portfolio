@@ -1,92 +1,196 @@
-import Link from "next/link";
 import Image from "next/image";
+import Link from "next/link";
 import { insights } from "@/data/content";
 
-const capabilities = [
-  ["01", "Engineering delivery systems", "Release governance, cross-team execution, dependency management, and executive decision forums."],
-  ["02", "AI-enabled operating models", "Evidence-grounded automation, responsible AI controls, and decision support for complex programs."],
-  ["03", "Secure digital platforms", "Payment modernization, cyber-risk integration, control readiness, and resilient production entry."],
-  ["04", "Portfolio transformation", "Roadmap design, investment alignment, delivery health, and operating-model modernization at scale."],
+const plannedWork = [
+  {
+    number: "02",
+    title: "Dependency Intelligence",
+    status: "In design",
+    summary: "A practical operating view of cross-team commitments, critical paths, and early intervention points.",
+  },
+  {
+    number: "03",
+    title: "Engineering Control Tower",
+    status: "On the roadmap",
+    summary: "An executive view of delivery health, systemic constraints, and portfolio-level decisions.",
+  },
 ];
 
-const projects = [
-  { title: "Release Intelligence", state: "Live reference implementation", tone: "live", summary: "Explainable readiness, risk, dependency, and decision intelligence for critical software releases.", href: "/work/release-intelligence", code: "RI / 01" },
-  { title: "Dependency Intelligence", state: "Design phase", tone: "design", summary: "Cross-team commitments, critical-path visibility, and earlier intervention across engineering portfolios.", href: "#contact", code: "DI / 02" },
-  { title: "Engineering Control Tower", state: "Roadmap", tone: "roadmap", summary: "An executive operating view of delivery health, systemic constraints, and portfolio-level decision needs.", href: "#contact", code: "CT / 03" },
+const principles = [
+  {
+    title: "Make the work legible.",
+    text: "Complex programs become more manageable when teams share a clear view of outcomes, evidence, ownership, and risk.",
+  },
+  {
+    title: "Govern through decisions.",
+    text: "Useful governance clarifies tradeoffs and accelerates accountable action; it does not simply collect status.",
+  },
+  {
+    title: "Build trust into delivery.",
+    text: "Security, resilience, and operational readiness belong in the delivery system from the beginning—not at the final gate.",
+  },
 ];
 
 export default function Home() {
   return (
     <main>
       <header className="site-header">
-        <Link className="identity" href="/" aria-label="Utham Kumar home"><span>UK</span><b>Utham Kumar</b></Link>
+        <Link className="identity" href="/" aria-label="Utham Kumar home">
+          <span>Utham Kumar</span>
+          <small>Technology leadership</small>
+        </Link>
         <nav aria-label="Primary navigation">
-          <a href="#work">Work</a><a href="#experience">Experience</a><a href="#insights">Insights</a><a href="#contact">Contact</a>
+          <a href="#work">Selected work</a>
+          <a href="#experience">Experience</a>
+          <a href="#writing">Writing</a>
+          <a href="#contact">Contact</a>
         </nav>
-        <a className="header-link" href="https://www.linkedin.com/in/kumar1612/" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+        <a className="header-link" href="https://www.linkedin.com/in/kumar1612/" target="_blank" rel="noreferrer">
+          LinkedIn ↗
+        </a>
       </header>
 
-      <section className="hero section-shell">
-        <div className="hero-copy">
-          <span className="kicker">Technology program & product leadership</span>
-          <h1>I build operating systems for <em>engineering organizations.</em></h1>
-          <p>Two decades leading enterprise software delivery, AI-enabled platforms, secure digital payments, and large-scale cloud programs—connecting strategy to measurable execution.</p>
-          <div className="hero-actions"><a className="button primary" href="#work">Explore selected work</a><a className="button secondary" href="mailto:info@uthamkumar.info">Start a conversation</a></div>
-          <div className="hero-proof"><span><b>20+</b><small>Years across technology delivery</small></span><span><b>Global</b><small>Distributed teams & stakeholders</small></span><span><b>Atlanta</b><small>Based in Georgia, USA</small></span></div>
+      <section className="hero section-shell" aria-labelledby="intro-title">
+        <div className="hero-main">
+          <span className="eyebrow">Utham Kumar · Atlanta, Georgia</span>
+          <h1 id="intro-title">I help engineering organizations turn complexity into <em>confident execution.</em></h1>
         </div>
-        <div className="hero-visual" aria-hidden="true">
-          <div className="visual-grid" />
-          <Image src="/portfolio-geometry.png" alt="" width={456} height={763} priority />
-          <div className="visual-label label-one"><small>OPERATING FOCUS</small><b>Strategy → execution</b></div>
-          <div className="visual-label label-two"><small>DECISION MODEL</small><b>Evidence → action</b></div>
-          <span className="visual-index">01—26</span>
+        <div className="hero-intro">
+          <p>I&apos;m a technology program and product leader with more than two decades of experience across enterprise software delivery, secure digital platforms, AI-enabled systems, and cloud transformation.</p>
+          <p>My work connects strategy, engineering, risk, and operations—so leaders can see what matters, teams can make better decisions, and complex programs can move forward with clarity.</p>
+          <div className="hero-links">
+            <a href="#work">View selected work ↓</a>
+            <a href="mailto:info@uthamkumar.info">info@uthamkumar.info ↗</a>
+          </div>
         </div>
       </section>
 
-      <section className="principle-band">
-        <div className="section-shell"><span>Release intelligence</span><i /><span>Delivery governance</span><i /><span>Enterprise AI</span><i /><span>Secure platforms</span><i /><span>Engineering health</span></div>
+      <section className="perspective" aria-label="Leadership perspective">
+        <div className="section-shell perspective-inner">
+          <p>My focus is not status reporting. It is designing the operating mechanisms that help engineering organizations make good decisions repeatedly.</p>
+          <span>Technology program leadership · Product thinking · Engineering delivery</span>
+        </div>
       </section>
 
-      <section className="statement section-shell">
-        <span className="section-number">01 / LEADERSHIP THESIS</span>
-        <div><h2>Technology leadership is the design of a system in which good decisions become repeatable.</h2><p>I work at the intersection of engineering execution, product outcomes, governance, and organizational change—building the mechanisms that help teams see risk sooner, make tradeoffs explicitly, and deliver with confidence.</p></div>
-      </section>
-
-      <section className="capabilities section-shell" id="expertise">
-        <div className="section-heading"><span className="section-number">02 / OPERATING CAPABILITIES</span><h2>From fragmented status<br />to decision-ready execution.</h2></div>
-        <div className="capability-grid">{capabilities.map(([number, title, text]) => <article key={number}><span>{number}</span><h3>{title}</h3><p>{text}</p></article>)}</div>
+      <section className="about section-shell" id="about">
+        <div className="section-label"><span>01</span><p>How I work</p></div>
+        <div className="about-copy">
+          <h2>Leadership at the intersection of delivery, product, and risk.</h2>
+          <div className="about-columns">
+            <p>I work with engineering, product, security, operations, and business leaders to translate ambitious objectives into an executable system: clear outcomes, explicit decisions, visible dependencies, and evidence-based governance.</p>
+            <p>The thread across my career has been consistent—bringing structure to work that crosses organizational boundaries, and creating the conditions for teams to deliver at scale without losing sight of trust, resilience, or customer value.</p>
+          </div>
+        </div>
       </section>
 
       <section className="work-section" id="work">
         <div className="section-shell">
-          <div className="section-heading light"><span className="section-number">03 / SELECTED WORK</span><h2>Engineering Intelligence Lab</h2><p>Public reference implementations that turn technology-program leadership into tangible operating systems. All data is synthetic.</p></div>
-          <div className="project-feature">
-            <div className="project-image"><Image src="/release-intelligence.jpg" alt="Release Intelligence dashboard preview" width={1731} height={909} /></div>
-            <div className="project-feature-copy"><span className="project-code">FLAGSHIP / RI-001</span><h3>Release Intelligence</h3><p>A decision system for release confidence: weighted readiness, evidence quality, safety gates, risks, dependencies, trends, and an executive AI brief.</p><ul><li>Explainable confidence methodology</li><li>Portfolio Control Tower</li><li>No-key AI fallback mode</li><li>Dual-target Next.js architecture</li></ul><Link className="project-link" href="/work/release-intelligence">Read the case study <span>↗</span></Link></div>
+          <div className="section-label light"><span>02</span><p>Selected work</p></div>
+          <div className="work-intro">
+            <h2>Ideas made tangible.</h2>
+            <p>The Engineering Intelligence Lab is a collection of public reference implementations based on operating patterns I have developed and used in enterprise programs. All data is synthetic; all company details are fictional.</p>
           </div>
-          <div className="project-grid">{projects.slice(1).map((project) => <article key={project.title}><div><span className="project-code">{project.code}</span><span className={`project-state ${project.tone}`}>{project.state}</span></div><h3>{project.title}</h3><p>{project.summary}</p><a href={project.href}>Follow the work →</a></article>)}<article className="lab-card"><span className="lab-monogram">EIL</span><h3>A coherent portfolio, built in public.</h3><p>Each project evolves independently while contributing to one technology-leadership thesis.</p></article></div>
+
+          <article className="featured-work">
+            <Link className="featured-image" href="/work/release-intelligence" aria-label="Read the Release Intelligence case study">
+              <Image src="/release-intelligence.jpg" alt="Release Intelligence executive dashboard" width={1731} height={909} priority />
+            </Link>
+            <div className="featured-copy">
+              <div className="featured-meta"><span>Case study 01</span><span>Live reference implementation</span></div>
+              <h3>Release Intelligence</h3>
+              <p className="featured-lede">An explainable decision system for critical software releases—turning fragmented readiness evidence into a shared view of confidence, risk, and action.</p>
+              <dl>
+                <div><dt>Context</dt><dd>Release decisions depend on evidence scattered across delivery, testing, security, dependencies, and operations.</dd></div>
+                <div><dt>My role</dt><dd>Operating-model designer, product strategist, and program leadership practitioner.</dd></div>
+                <div><dt>Approach</dt><dd>Define the decision, normalize evidence, explain the confidence model, and connect every risk to accountable action.</dd></div>
+                <div><dt>Outcome</dt><dd>A working public reference implementation that demonstrates the complete leadership system.</dd></div>
+              </dl>
+              <div className="featured-links">
+                <Link href="/work/release-intelligence">Read the case study →</Link>
+                <a href="https://release-intelligence.uthamkumar.info" target="_blank" rel="noreferrer">Open the live application ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <div className="work-in-progress">
+            <p className="work-in-progress-label">Work in progress</p>
+            {plannedWork.map((project) => (
+              <article key={project.title}>
+                <span>{project.number}</span>
+                <h3>{project.title}</h3>
+                <p>{project.summary}</p>
+                <small>{project.status}</small>
+              </article>
+            ))}
+          </div>
         </div>
       </section>
 
       <section className="experience section-shell" id="experience">
-        <div className="section-heading"><span className="section-number">04 / EXPERIENCE</span><h2>Career foundation</h2><p>A sustained focus on translating complex technology into controlled, cross-functional delivery.</p></div>
-        <div className="experience-list">
-          <article><span className="experience-era">Enterprise leadership</span><div><h3>Technology Program & Product Management Leader</h3><span>FinTech · Atlanta, GA</span><p>Led large-scale programs across enterprise software, AI-enabled platforms, secure digital systems, cloud modernization, and delivery governance. Aligned engineering, product, security, operations, and business stakeholders around measurable outcomes and risk-informed execution.</p></div></article>
-          <article><span className="experience-era">Platform delivery</span><div><h3>Senior Technical Program Manager</h3><span>Telecommunications</span><p>Managed complex platform initiatives focused on system reliability, performance, structured delivery, and multi-team coordination. Helped standardize development and release practices across distributed enterprise environments.</p></div></article>
+        <div className="section-label"><span>03</span><p>Experience</p></div>
+        <div className="experience-heading">
+          <h2>A career built around consequential technology delivery.</h2>
+          <p>More than 20 years helping distributed teams deliver complex platforms in highly connected enterprise environments.</p>
         </div>
-        <div className="education"><span className="section-number">EDUCATION</span><div><b>Master&apos;s in Communication Engineering</b><small>Nanyang Technological University · Singapore</small></div><div><b>Bachelor of Engineering</b><small>University of Madras · India</small></div></div>
+        <div className="experience-list">
+          <article>
+            <span className="experience-era">Enterprise leadership</span>
+            <div><h3>Technology Program &amp; Product Management Leader</h3><span>FinTech · Atlanta, Georgia</span><p>Leadership across enterprise software, AI-enabled platforms, secure digital systems, cloud modernization, and delivery governance. Alignment of engineering, product, security, operations, and business stakeholders around measurable outcomes and risk-informed execution.</p></div>
+          </article>
+          <article>
+            <span className="experience-era">Platform delivery</span>
+            <div><h3>Senior Technical Program Manager</h3><span>Telecommunications</span><p>Complex platform initiatives spanning reliability, performance, structured delivery, and multi-team coordination across distributed enterprise environments.</p></div>
+          </article>
+        </div>
+        <div className="education">
+          <p>Education</p>
+          <div><b>Master&apos;s in Communication Engineering</b><small>Nanyang Technological University · Singapore</small></div>
+          <div><b>Bachelor of Engineering</b><small>University of Madras · India</small></div>
+        </div>
       </section>
 
-      <section className="insights section-shell" id="insights">
-        <div className="section-heading"><span className="section-number">05 / PERSPECTIVES</span><h2>Writing on systems, risk, and transformation.</h2><a href="https://medium.com/@asuk1915" target="_blank" rel="noreferrer">Medium profile ↗</a></div>
-        <div className="insight-grid">{insights.map((insight, index) => <Link href={`/insights/${insight.slug}`} className="insight-card" key={insight.slug}><span className="insight-index">0{index + 1}</span><span className="insight-category">{insight.category}</span><h3>{insight.title}</h3><p>{insight.dek}</p><span className="read-link">Read perspective →</span></Link>)}</div>
+      <section className="principles section-shell" aria-labelledby="principles-title">
+        <div className="section-label"><span>04</span><p>Leadership principles</p></div>
+        <h2 id="principles-title">The standards behind the work.</h2>
+        <div className="principle-list">
+          {principles.map((principle, index) => (
+            <article key={principle.title}><span>0{index + 1}</span><h3>{principle.title}</h3><p>{principle.text}</p></article>
+          ))}
+        </div>
+      </section>
+
+      <section className="writing section-shell" id="writing">
+        <div className="section-label"><span>05</span><p>Writing</p></div>
+        <div className="writing-heading">
+          <h2>Notes on technology leadership.</h2>
+          <a href="https://medium.com/@asuk1915" target="_blank" rel="noreferrer">Medium profile ↗</a>
+        </div>
+        <div className="writing-list">
+          {insights.map((insight) => (
+            <Link href={`/insights/${insight.slug}`} key={insight.slug}>
+              <span>{insight.category}</span><h3>{insight.title}</h3><small>{insight.readTime} · Read →</small>
+            </Link>
+          ))}
+        </div>
       </section>
 
       <section className="contact" id="contact">
-        <div className="section-shell"><span className="section-number">06 / CONTACT</span><h2>Let&apos;s make complex delivery<br />easier to see—and lead.</h2><p>For technology leadership, program transformation, industry conversations, and speaking inquiries.</p><div className="contact-links"><a href="mailto:info@uthamkumar.info">info@uthamkumar.info ↗</a><a href="https://www.linkedin.com/in/kumar1612/" target="_blank" rel="noreferrer">LinkedIn ↗</a><a href="https://medium.com/@asuk1915" target="_blank" rel="noreferrer">Medium ↗</a></div></div>
+        <div className="section-shell contact-inner">
+          <span className="eyebrow">Get in touch</span>
+          <h2>Let&apos;s make complex delivery easier to see—and lead.</h2>
+          <p>For technology leadership, program transformation, industry conversations, and speaking inquiries.</p>
+          <div className="contact-links">
+            <a href="mailto:info@uthamkumar.info">info@uthamkumar.info ↗</a>
+            <a href="https://www.linkedin.com/in/kumar1612/" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+            <a href="https://medium.com/@asuk1915" target="_blank" rel="noreferrer">Medium ↗</a>
+          </div>
+        </div>
       </section>
 
-      <footer><div className="section-shell"><span>© 2026 Utham Kumar Anugula Sethupathy</span><span>Technology program & product leadership</span><a href="#top">Back to top ↑</a></div></footer>
+      <footer>
+        <div className="section-shell"><span>© 2026 Utham Kumar Anugula Sethupathy</span><span>Atlanta, Georgia</span><a href="#top">Back to top ↑</a></div>
+      </footer>
     </main>
   );
 }
