@@ -4,12 +4,6 @@ import { insights } from "@/data/content";
 
 const plannedWork = [
   {
-    number: "03",
-    title: "Engineering Control Tower",
-    status: "Next in the lab",
-    summary: "An executive view of delivery health, systemic constraints, and portfolio-level decisions.",
-  },
-  {
     number: "04",
     title: "AI SDLC Governance",
     status: "On the roadmap",
@@ -171,6 +165,27 @@ export default function Home() {
               <div className="featured-links">
                 <Link href="/work/dependency-intelligence">Read the case study →</Link>
                 <a href="https://dependency-intelligence.uthamkumar.info" target="_blank" rel="noreferrer">Open the live application ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <article className="featured-work featured-work-next">
+            <Link className="featured-image" href="/work/engineering-control-tower" aria-label="Read the Engineering Control Tower case study">
+              <Image src="/engineering-control-tower.png" alt="Engineering Control Tower executive portfolio intelligence view" width={1536} height={1024} />
+            </Link>
+            <div className="featured-copy">
+              <div className="featured-meta"><span>Case study 03</span><span>Live reference implementation</span></div>
+              <h3>Engineering Control Tower</h3>
+              <p className="featured-lede">An executive operating system for engineering portfolios—connecting outcome confidence, delivery health, shared constraints, and accountable interventions.</p>
+              <dl>
+                <div><dt>Context</dt><dd>Portfolio reviews often aggregate team status without revealing which system constraint is limiting outcomes or where executive intervention will change performance.</dd></div>
+                <div><dt>My role</dt><dd>Portfolio operating-model designer, decision-system architect, and engineering delivery leadership practitioner.</dd></div>
+                <div><dt>Approach</dt><dd>Combine six explainable health dimensions with hard governance rules, constraint analysis, team drill-down, and an explicit decision queue.</dd></div>
+                <div><dt>Outcome</dt><dd>A working public reference implementation that turns engineering evidence into a repeatable executive intervention cadence.</dd></div>
+              </dl>
+              <div className="featured-links">
+                <Link href="/work/engineering-control-tower">Read the case study →</Link>
+                <a href="https://engineering-control-tower.vercel.app" target="_blank" rel="noreferrer">Open the live application ↗</a>
               </div>
             </div>
           </article>
