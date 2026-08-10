@@ -170,7 +170,7 @@ export default function Home() {
               </dl>
               <div className="featured-links">
                 <Link href="/work/dependency-intelligence">Read the case study →</Link>
-                <a href="https://dependency-intelligence.asuk1915.chatgpt.site" target="_blank" rel="noreferrer">Open the live application ↗</a>
+                <a href="https://dependency-intelligence.uthamkumar.info" target="_blank" rel="noreferrer">Open the live application ↗</a>
               </div>
             </div>
           </article>
