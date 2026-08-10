@@ -4,16 +4,22 @@ import { insights } from "@/data/content";
 
 const plannedWork = [
   {
-    number: "02",
-    title: "Dependency Intelligence",
-    status: "In design",
-    summary: "A practical operating view of cross-team commitments, critical paths, and early intervention points.",
-  },
-  {
     number: "03",
     title: "Engineering Control Tower",
-    status: "On the roadmap",
+    status: "Next in the lab",
     summary: "An executive view of delivery health, systemic constraints, and portfolio-level decisions.",
+  },
+  {
+    number: "04",
+    title: "AI SDLC Governance",
+    status: "On the roadmap",
+    summary: "A governance system for safe, measurable, and accountable AI adoption across the software lifecycle.",
+  },
+  {
+    number: "05",
+    title: "Cyber Risk Command Center",
+    status: "On the roadmap",
+    summary: "A portfolio view that connects cyber exposure, remediation commitments, and executive risk decisions.",
   },
 ];
 
@@ -144,6 +150,27 @@ export default function Home() {
               <div className="featured-links">
                 <Link href="/work/release-intelligence">Read the case study →</Link>
                 <a href="https://release-intelligence.uthamkumar.info" target="_blank" rel="noreferrer">Open the live application ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <article className="featured-work featured-work-next">
+            <Link className="featured-image" href="/work/dependency-intelligence" aria-label="Read the Dependency Intelligence case study">
+              <Image src="/dependency-intelligence.png" alt="Dependency Intelligence critical-path visualization" width={1730} height={909} />
+            </Link>
+            <div className="featured-copy">
+              <div className="featured-meta"><span>Case study 02</span><span>Live reference implementation</span></div>
+              <h3>Dependency Intelligence</h3>
+              <p className="featured-lede">An explainable operating system for cross-team delivery commitments—revealing critical path, provider concentration, blast radius, and the intervention most likely to protect the outcome.</p>
+              <dl>
+                <div><dt>Context</dt><dd>Dependency logs describe work but rarely show which cross-team commitment threatens an outcome or where leadership action has the highest value.</dd></div>
+                <div><dt>My role</dt><dd>Operating-model designer, decision-system architect, and technology program leadership practitioner.</dd></div>
+                <div><dt>Approach</dt><dd>Model dependencies as explicit commitments, rank exposure transparently, trace propagation, and attach every intervention to an owner and date.</dd></div>
+                <div><dt>Outcome</dt><dd>A working public reference implementation for running executive dependency reviews from evidence rather than status narrative.</dd></div>
+              </dl>
+              <div className="featured-links">
+                <Link href="/work/dependency-intelligence">Read the case study →</Link>
+                <a href="https://dependency-intelligence.uthamkumar.info" target="_blank" rel="noreferrer">Open the live application ↗</a>
               </div>
             </div>
           </article>

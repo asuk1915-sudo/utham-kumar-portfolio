@@ -62,6 +62,7 @@ img { display: block; max-width: 100%; }
 .work-intro h2 { margin: 0; font-family: var(--font-serif); font-size: clamp(52px, 6vw, 82px); font-weight: 400; letter-spacing: -.05em; }
 .work-intro p { margin: 0; color: #a6b2ad; font-size: 11px; line-height: 1.75; }
 .featured-work { display: grid; grid-template-columns: 1.05fr .95fr; border-top: 1px solid #40514b; border-bottom: 1px solid #40514b; }
+.featured-work-next { margin-top: 72px; }
 .featured-image { display: grid; place-items: center; padding: 46px; background: #e8e5dc; }
 .featured-image img { box-shadow: 0 24px 55px rgba(5, 14, 11, .22); transition: transform .3s ease; }
 .featured-image:hover img { transform: scale(1.01); }

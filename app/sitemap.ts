@@ -13,6 +13,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.8,
     },
+    {
+      url: `${baseUrl}/work/dependency-intelligence`,
+      lastModified: new Date("2026-08-10"),
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
     ...insights.map((insight) => ({
       url: `${baseUrl}/insights/${insight.slug}`,
       lastModified: updated,
