@@ -38,6 +38,7 @@ img { display: block; max-width: 100%; }
 .hero h1 em { color: var(--accent); font-style: italic; font-weight: 400; }
 .hero-intro { padding-bottom: 7px; }
 .hero-intro > p { margin: 0 0 20px; color: #4e5b56; font-size: 13px; line-height: 1.75; }
+.hero-intro > .hero-positioning { margin-bottom: 24px; padding-bottom: 24px; color: var(--ink); border-bottom: 1px solid var(--line); font-family: var(--font-serif); font-size: 19px; line-height: 1.45; letter-spacing: -.015em; }
 .hero-links { display: flex; flex-direction: column; align-items: flex-start; gap: 11px; margin-top: 35px; }
 .hero-links a { padding-bottom: 3px; color: var(--accent); border-bottom: 1px solid var(--accent-soft); font-size: 9px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; }
 
@@ -94,6 +95,11 @@ img { display: block; max-width: 100%; }
 .experience-list h3 { margin: 0; font-family: var(--font-serif); font-size: 28px; font-weight: 400; letter-spacing: -.03em; }
 .experience-list div > span { display: block; margin-top: 7px; color: var(--accent); font-size: 8px; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; }
 .experience-list p { max-width: 780px; margin: 21px 0 0; color: #5b6762; font-size: 10px; line-height: 1.75; }
+.experience-role ul { display: flex; flex-wrap: wrap; gap: 8px 20px; margin: 22px 0 0; padding: 0; list-style: none; }
+.experience-role li { position: relative; padding-left: 12px; color: var(--ink); font-family: var(--font-mono); font-size: 7px; letter-spacing: .04em; text-transform: uppercase; }
+.experience-role li::before { content: ""; position: absolute; left: 0; top: 50%; width: 4px; height: 4px; margin-top: -2px; border-radius: 50%; background: var(--accent); }
+.experience-role > small { display: block; max-width: 820px; margin-top: 20px; padding-top: 16px; color: #78817e; border-top: 1px solid var(--line); font-size: 8px; line-height: 1.7; }
+.experience-earlier { color: #4f5b57; }
 .education { display: grid; grid-template-columns: .4fr .8fr .8fr; gap: 25px; padding-top: 43px; }
 .education > p { margin: 0; color: var(--accent); font-family: var(--font-mono); font-size: 7px; letter-spacing: .09em; text-transform: uppercase; }
 .education b, .education small { display: block; }
@@ -107,6 +113,19 @@ img { display: block; max-width: 100%; }
 .principle-list article > span { color: var(--accent); font-family: var(--font-mono); font-size: 8px; }
 .principle-list h3 { margin: 0; font-family: var(--font-serif); font-size: 29px; font-weight: 400; letter-spacing: -.03em; }
 .principle-list p { max-width: 500px; margin: 0; color: #5b6762; font-size: 10px; line-height: 1.7; }
+
+.research { padding-bottom: 145px; }
+.research-heading { display: grid; grid-template-columns: 1.15fr .55fr; gap: 90px; align-items: end; margin: 40px 0 50px; }
+.research-heading h2 { max-width: 760px; margin: 0; font-family: var(--font-serif); font-size: clamp(45px, 5vw, 70px); font-weight: 400; line-height: 1; letter-spacing: -.045em; }
+.research-heading p { margin: 0; color: var(--muted); font-size: 10px; line-height: 1.7; }
+.research-heading a { display: inline-block; margin-top: 19px; color: var(--accent); font-size: 8px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+.research-list { border-top: 1px solid var(--line); }
+.research-list > a { display: grid; grid-template-columns: .28fr 1.15fr .36fr 20px; gap: 25px; align-items: center; padding: 27px 0; border-bottom: 1px solid var(--line); transition: color .2s ease, padding .2s ease; }
+.research-list > a:hover { padding-inline: 8px; color: var(--accent); }
+.research-list span { color: var(--accent); font-family: var(--font-mono); font-size: 7px; letter-spacing: .08em; text-transform: uppercase; }
+.research-list h3 { margin: 0; font-family: var(--font-serif); font-size: 23px; font-weight: 400; line-height: 1.15; letter-spacing: -.025em; }
+.research-list small { color: #77817d; font-size: 7px; line-height: 1.5; letter-spacing: .06em; text-transform: uppercase; }
+.research-list b { justify-self: end; color: var(--accent); font-size: 11px; font-weight: 400; }
 
 .writing { padding-bottom: 145px; }
 .writing-heading { display: flex; align-items: end; justify-content: space-between; margin: 40px 0 50px; }
@@ -155,6 +174,8 @@ footer > div { display: flex; justify-content: space-between; padding-block: 25p
 .case-grid b { color: var(--accent-soft); font-family: var(--font-mono); font-size: 8px; }
 .case-grid h3 { margin: 65px 0 12px; font-family: var(--font-serif); font-size: 20px; font-weight: 400; }
 .case-grid p { color: #93a39d; font-size: 9px; line-height: 1.6; }
+.case-ecosystem { max-width: 1050px; margin: 35px 0 0; padding-top: 25px; color: #93a39d; border-top: 1px solid #3a4c46; font-size: 9px; line-height: 1.8; }
+.case-ecosystem b { color: var(--accent-soft); font-weight: 700; }
 .case-actions { display: flex; gap: 9px; margin-top: 28px; }
 .case-actions a { padding: 10px 12px; color: var(--accent); border: 1px solid #c5cbc6; font-size: 8px; font-weight: 700; text-transform: uppercase; }
 .case-footer { display: flex; justify-content: space-between; padding: 20px 5vw; color: #93a19c; background: #101d19; font-size: 7px; text-transform: uppercase; }
@@ -177,7 +198,7 @@ footer > div { display: flex; justify-content: space-between; padding-block: 25p
   .site-header nav { display: none; }
   .hero { grid-template-columns: 1fr; gap: 55px; min-height: auto; }
   .hero-intro { max-width: 650px; }
-  .perspective-inner, .about, .featured-work, .experience-heading, .case-content { grid-template-columns: 1fr; }
+  .perspective-inner, .about, .featured-work, .experience-heading, .research-heading, .case-content { grid-template-columns: 1fr; }
   .featured-copy { padding-left: 0; }
   .work-in-progress { grid-template-columns: 1fr 1fr; }
   .work-in-progress-label { grid-column: 1 / -1; padding-bottom: 20px; }
@@ -208,9 +229,13 @@ footer > div { display: flex; justify-content: space-between; padding-block: 25p
   .work-in-progress small { right: 0; }
   .experience-heading { gap: 25px; margin-bottom: 40px; }
   .experience-list article, .principle-list article { grid-template-columns: 1fr; gap: 18px; }
+  .experience-role ul { display: grid; gap: 10px; }
   .education { grid-template-columns: 1fr; gap: 22px; }
-  .principles, .writing { padding-bottom: 95px; }
+  .principles, .research, .writing { padding-bottom: 95px; }
   .principles > h2 { margin-bottom: 35px; }
+  .research-heading { gap: 25px; margin-bottom: 40px; }
+  .research-list > a { grid-template-columns: 1fr; gap: 9px; }
+  .research-list b { display: none; }
   .writing-heading { display: block; }
   .writing-heading > a { display: inline-block; margin-top: 22px; }
   .writing-list > a { grid-template-columns: 1fr; gap: 9px; }

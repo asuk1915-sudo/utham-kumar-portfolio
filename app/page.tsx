@@ -32,6 +32,39 @@ const principles = [
   },
 ];
 
+const research = [
+  {
+    type: "Conference talk",
+    title: "Scaling Financial Inclusion: SRE Practices for High-Performance Payment Systems in Emerging Markets",
+    venue: "Conf42 SRE · 2025",
+    href: "https://www.conf42.com/Site_Reliability_Engineering_SRE_2025_Utham_Kumar_scaling_financial_inclusion",
+  },
+  {
+    type: "Invited keynote",
+    title: "Responsible Autonomy in SDLC: Safe, Compliant, and Zero-Touch for Payments-Grade Systems",
+    venue: "CISCom · 2025",
+    href: "https://2025.ciscom.org/author/aiccons/",
+  },
+  {
+    type: "Conference paper",
+    title: "Zero-Touch GenAI Coach: Self-healing SDLC Pipelines for FinTech Micro-services",
+    venue: "Springer CCIS · 2026",
+    href: "https://link.springer.com/chapter/10.1007/978-981-95-7289-2_14",
+  },
+  {
+    type: "Research article",
+    title: "GenAI-Powered Program Management: Enhancing Decision-Making with Copilot Agents in Agile Environments",
+    venue: "Journal of Advanced Computing Systems · 2026",
+    href: "https://doi.org/10.69987/JACS.2026.60301",
+  },
+  {
+    type: "Proceedings paper",
+    title: "AI-Powered Cybersecurity Mesh for Financial Transactions",
+    venue: "MDPI · CISCom proceedings · 2025",
+    href: "https://www.mdpi.com/2813-0324/12/1/10",
+  },
+];
+
 export default function Home() {
   return (
     <main>
@@ -43,6 +76,7 @@ export default function Home() {
         <nav aria-label="Primary navigation">
           <a href="#work">Selected work</a>
           <a href="#experience">Experience</a>
+          <a href="#research">Research</a>
           <a href="#writing">Writing</a>
           <a href="#contact">Contact</a>
         </nav>
@@ -57,7 +91,8 @@ export default function Home() {
           <h1 id="intro-title">I help engineering organizations turn complexity into <em>confident execution.</em></h1>
         </div>
         <div className="hero-intro">
-          <p>I&apos;m a technology program and product leader with more than two decades of experience across enterprise software delivery, secure digital platforms, AI-enabled systems, and cloud transformation.</p>
+          <p className="hero-positioning">Technology program and product leadership across AI-driven secure computing systems, cloud architecture, engineering delivery, and digital payments.</p>
+          <p>I bring more than two decades of experience turning complex product, platform, and transformation objectives into executable operating systems.</p>
           <p>My work connects strategy, engineering, risk, and operations—so leaders can see what matters, teams can make better decisions, and complex programs can move forward with clarity.</p>
           <div className="hero-links">
             <a href="#work">View selected work ↓</a>
@@ -131,16 +166,45 @@ export default function Home() {
         <div className="section-label"><span>03</span><p>Experience</p></div>
         <div className="experience-heading">
           <h2>A career built around consequential technology delivery.</h2>
-          <p>More than 20 years helping distributed teams deliver complex platforms in highly connected enterprise environments.</p>
+          <p>Selected experience across financial technology, telecommunications, connected vehicles, enterprise software, and global product engineering.</p>
         </div>
         <div className="experience-list">
           <article>
-            <span className="experience-era">Enterprise leadership</span>
-            <div><h3>Technology Program &amp; Product Management Leader</h3><span>FinTech · Atlanta, Georgia</span><p>Leadership across enterprise software, AI-enabled platforms, secure digital systems, cloud modernization, and delivery governance. Alignment of engineering, product, security, operations, and business stakeholders around measurable outcomes and risk-informed execution.</p></div>
+            <span className="experience-era">Enterprise payments</span>
+            <div className="experience-role">
+              <h3>Visa</h3>
+              <span>Lead, Technology Program Management · Atlanta, Georgia</span>
+              <p>Owned cross-portfolio execution and operating-model transformation across commercial-payment programs, aligning Product, Engineering, Architecture, Cybersecurity, Infrastructure, and Operations around roadmap, risk, resilience, and release decisions.</p>
+              <ul><li>20+ engineering squads</li><li>AI-enabled delivery intelligence</li><li>Secure SDLC and production readiness</li></ul>
+              <small>Enterprise ecosystem: Jira Align · Jira · GitHub Enterprise · CI/CD and DevSecOps toolchains · Cloud and observability platforms</small>
+            </div>
           </article>
           <article>
-            <span className="experience-era">Platform delivery</span>
-            <div><h3>Senior Technical Program Manager</h3><span>Telecommunications</span><p>Complex platform initiatives spanning reliability, performance, structured delivery, and multi-team coordination across distributed enterprise environments.</p></div>
+            <span className="experience-era">Digital platforms</span>
+            <div className="experience-role">
+              <h3>T-Mobile</h3>
+              <span>Technology delivery and engineering program leadership</span>
+              <p>Directed a global engineering portfolio across the United States, Mexico, and India, spanning microservices modernization, release governance, real-time inventory, reliability, and decision visibility.</p>
+              <ul><li>64-person global organization</li><li>30% reduction in downtime</li><li>25% fewer release issues</li><li>50% fewer inventory errors</li></ul>
+              <small>Delivery ecosystem: Jira · Power BI · Microservices · Automated release governance · Cloud platforms</small>
+            </div>
+          </article>
+          <article>
+            <span className="experience-era">Connected mobility</span>
+            <div className="experience-role">
+              <h3>Verizon</h3>
+              <span>Technical program and platform delivery leadership</span>
+              <p>Led cross-functional delivery across connected-vehicle platforms including Mercedes-Benz mbrace, Volkswagen Car-Net, and Verizon Hum, coordinating complex mobile, web, middleware, telematics, CRM, billing, and production ecosystems.</p>
+              <ul><li>1M+ subscribers</li><li>Multimillion-dollar portfolio</li><li>Global automotive launches</li><li>40% faster emergency-response workflows</li></ul>
+            </div>
+          </article>
+          <article className="experience-earlier">
+            <span className="experience-era">Earlier leadership</span>
+            <div className="experience-role">
+              <h3>Meritech · Lenovo</h3>
+              <span>Product strategy, global delivery, and quality engineering</span>
+              <p>Owned mobile-network diagnostics product strategy and lifecycle delivery at Meritech, and led a 55-person onsite/offshore quality-engineering organization supporting Lenovo ThinkPad products.</p>
+            </div>
           </article>
         </div>
         <div className="education">
@@ -160,8 +224,23 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="research section-shell" id="research">
+        <div className="section-label"><span>05</span><p>Speaking &amp; research</p></div>
+        <div className="research-heading">
+          <h2>Ideas tested in public.</h2>
+          <div><p>Selected talks and published work across secure AI systems, software delivery, platform resilience, and digital payments.</p><a href="https://scholar.google.com/citations?user=J74tCuwAAAAJ&amp;hl=en" target="_blank" rel="noreferrer">Google Scholar ↗</a></div>
+        </div>
+        <div className="research-list">
+          {research.map((item) => (
+            <a href={item.href} target="_blank" rel="noreferrer" key={item.title}>
+              <span>{item.type}</span><h3>{item.title}</h3><small>{item.venue}</small><b aria-hidden="true">↗</b>
+            </a>
+          ))}
+        </div>
+      </section>
+
       <section className="writing section-shell" id="writing">
-        <div className="section-label"><span>05</span><p>Writing</p></div>
+        <div className="section-label"><span>06</span><p>Writing</p></div>
         <div className="writing-heading">
           <h2>Notes on technology leadership.</h2>
           <a href="https://medium.com/@asuk1915" target="_blank" rel="noreferrer">Medium profile ↗</a>
@@ -179,7 +258,7 @@ export default function Home() {
         <div className="section-shell contact-inner">
           <span className="eyebrow">Get in touch</span>
           <h2>Let&apos;s make complex delivery easier to see—and lead.</h2>
-          <p>For technology leadership, program transformation, industry conversations, and speaking inquiries.</p>
+          <p>Open to senior and principal technology program, engineering delivery, portfolio transformation, and AI-enabled platform leadership opportunities—as well as industry and speaking conversations.</p>
           <div className="contact-links">
             <a href="mailto:info@uthamkumar.info">info@uthamkumar.info ↗</a>
             <a href="https://www.linkedin.com/in/kumar1612/" target="_blank" rel="noreferrer">LinkedIn ↗</a>

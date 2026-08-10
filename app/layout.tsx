@@ -10,12 +10,12 @@ export async function generateMetadata(): Promise<Metadata> {
   const protocol = requestHeaders.get("x-forwarded-proto") ?? (host.includes("localhost") ? "http" : "https");
   const origin = `${protocol}://${host}`;
   const title = "Utham Kumar | Technology Program & Product Leader";
-  const description = "The portfolio of Utham Kumar, a technology program and product leader working across engineering delivery, secure digital platforms, enterprise AI, and cloud transformation.";
+  const description = "The portfolio of Utham Kumar, a technology program and product leader working across AI-driven secure computing systems, cloud architecture, engineering delivery, and digital payments.";
   return {
     title,
     description,
     applicationName: "Utham Kumar Portfolio",
-    keywords: ["technology program management", "product leadership", "engineering delivery", "enterprise AI", "digital payments"],
+    keywords: ["technology program management", "product leadership", "engineering delivery", "AI-driven secure computing systems", "cloud architecture", "digital payments"],
     openGraph: { title, description, type: "website", images: [{ url: `${origin}/og.png`, width: 1536, height: 1024, alt: "Utham Kumar, Technology Program and Product Leader" }] },
     twitter: { card: "summary_large_image", title, description, images: [`${origin}/og.png`] },
   };
