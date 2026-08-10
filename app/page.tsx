@@ -4,12 +4,6 @@ import { insights } from "@/data/content";
 
 const plannedWork = [
   {
-    number: "04",
-    title: "AI SDLC Governance",
-    status: "On the roadmap",
-    summary: "A governance system for safe, measurable, and accountable AI adoption across the software lifecycle.",
-  },
-  {
     number: "05",
     title: "Cyber Risk Command Center",
     status: "On the roadmap",
@@ -185,7 +179,28 @@ export default function Home() {
               </dl>
               <div className="featured-links">
                 <Link href="/work/engineering-control-tower">Read the case study →</Link>
-                <a href="https://engineering-control-tower.vercel.app" target="_blank" rel="noreferrer">Open the live application ↗</a>
+                <a href="https://engineering-control-tower.uthamkumar.info" target="_blank" rel="noreferrer">Open the live application ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <article className="featured-work featured-work-next">
+            <Link className="featured-image" href="/work/ai-sdlc-governance" aria-label="Read the AI SDLC Governance case study">
+              <Image src="/ai-sdlc-governance.png" alt="AI SDLC Governance executive governance posture view" width={1536} height={1024} />
+            </Link>
+            <div className="featured-copy">
+              <div className="featured-meta"><span>Case study 04</span><span>Reference implementation ready</span></div>
+              <h3>AI SDLC Governance</h3>
+              <p className="featured-lede">An explainable governance operating system for enterprise AI—connecting use-case risk, lifecycle controls, evidence, exceptions, and accountable production decisions.</p>
+              <dl>
+                <div><dt>Context</dt><dd>AI adoption can scale faster than the evidence, ownership, and controls leaders need to approve responsible production use.</dd></div>
+                <div><dt>My role</dt><dd>AI governance operating-system architect, decision-system designer, and technology program leadership practitioner.</dd></div>
+                <div><dt>Approach</dt><dd>Register and tier use cases, make lifecycle controls explicit, explain readiness and hard rules, and connect every exception to a decision.</dd></div>
+                <div><dt>Outcome</dt><dd>A GitHub-ready public reference implementation built entirely with synthetic data and a no-key executive brief.</dd></div>
+              </dl>
+              <div className="featured-links">
+                <Link href="/work/ai-sdlc-governance">Read the case study →</Link>
+                <a href="https://ai-sdlc-governance.uthamkumar.info" target="_blank" rel="noreferrer">Open the application when published ↗</a>
               </div>
             </div>
           </article>
