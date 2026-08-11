@@ -2,14 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { insights } from "@/data/content";
 
-const plannedWork = [
-  {
-    number: "05",
-    title: "Cyber Risk Command Center",
-    status: "On the roadmap",
-    summary: "A portfolio view that connects cyber exposure, remediation commitments, and executive risk decisions.",
-  },
-];
+const plannedWork: Array<{ number: string; title: string; status: string; summary: string }> = [];
 
 const principles = [
   {
@@ -200,12 +193,33 @@ export default function Home() {
               </dl>
               <div className="featured-links">
                 <Link href="/work/ai-sdlc-governance">Read the case study →</Link>
-                <a href="https://ai-sdlc-governance.uthamkumar.info" target="_blank" rel="noreferrer">Open the application when published ↗</a>
+                <a href="https://ai-sdlc-governance.uthamkumar.info" target="_blank" rel="noreferrer">Open the live application ↗</a>
               </div>
             </div>
           </article>
 
-          <div className="work-in-progress">
+          <article className="featured-work featured-work-next">
+            <Link className="featured-image" href="/work/cyber-risk-command-center" aria-label="Read the Cyber Risk Command Center case study">
+              <Image src="/cyber-risk-command-center.png" alt="Cyber Risk Command Center enterprise cyber risk posture view" width={1536} height={1024} />
+            </Link>
+            <div className="featured-copy">
+              <div className="featured-meta"><span>Case study 05</span><span>Live reference implementation</span></div>
+              <h3>Cyber Risk Command Center</h3>
+              <p className="featured-lede">An explainable executive operating system for material cyber risk—connecting crown-jewel exposure, control evidence, remediation velocity, exceptions, and accountable decisions.</p>
+              <dl>
+                <div><dt>Context</dt><dd>Cyber leadership reviews often contain too much telemetry and too little decision clarity about which risks require executive intervention.</dd></div>
+                <div><dt>My role</dt><dd>Cyber risk operating-model designer, executive decision-system architect, and technology program leadership practitioner.</dd></div>
+                <div><dt>Approach</dt><dd>Score cyber confidence across exposure, controls, remediation, identity, third party, and resilience, then apply hard rules for material-risk conditions.</dd></div>
+                <div><dt>Outcome</dt><dd>A working public reference implementation that turns synthetic cyber risk evidence into leadership posture, closure actions, and an executive brief.</dd></div>
+              </dl>
+              <div className="featured-links">
+                <Link href="/work/cyber-risk-command-center">Read the case study →</Link>
+                <a href="https://cyber-risk-command-center.uthamkumar.info" target="_blank" rel="noreferrer">Open the live application ↗</a>
+              </div>
+            </div>
+          </article>
+
+          {plannedWork.length > 0 && <div className="work-in-progress">
             <p className="work-in-progress-label">Work in progress</p>
             {plannedWork.map((project) => (
               <article key={project.title}>
@@ -215,7 +229,7 @@ export default function Home() {
                 <small>{project.status}</small>
               </article>
             ))}
-          </div>
+          </div>}
         </div>
       </section>
 
