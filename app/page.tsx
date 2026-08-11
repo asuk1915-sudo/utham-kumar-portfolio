@@ -219,6 +219,27 @@ export default function Home() {
             </div>
           </article>
 
+          <article className="featured-work featured-work-next">
+            <Link className="featured-image" href="/work/engineering-experience-index" aria-label="Read the Engineering Experience Index case study">
+              <Image src="/engineering-experience-index.png" alt="Engineering Experience Index developer effectiveness intelligence view" width={1536} height={1024} />
+            </Link>
+            <div className="featured-copy">
+              <div className="featured-meta"><span>Case study 06</span><span>Live reference implementation</span></div>
+              <h3>Engineering Experience Index</h3>
+              <p className="featured-lede">An explainable operating system for engineering experience and developer effectiveness—connecting friction, flow, toil, platform enablement, team health, and leadership decisions.</p>
+              <dl>
+                <div><dt>Context</dt><dd>Engineering organizations can optimize delivery output while missing the friction, toil, cognitive load, and platform gaps that quietly limit sustainable performance.</dd></div>
+                <div><dt>My role</dt><dd>Developer-experience operating-model designer, engineering effectiveness strategist, and technology program leadership practitioner.</dd></div>
+                <div><dt>Approach</dt><dd>Model experience signals as system evidence, score team health transparently, apply hard intervention rules, and connect every friction pattern to accountable action.</dd></div>
+                <div><dt>Outcome</dt><dd>A working public reference implementation that turns synthetic DevEx evidence into leadership decisions, improvement priorities, and an executive brief.</dd></div>
+              </dl>
+              <div className="featured-links">
+                <Link href="/work/engineering-experience-index">Read the case study →</Link>
+                <a href="https://engineering-experience-index.uthamkumar.info" target="_blank" rel="noreferrer">Open the live application ↗</a>
+              </div>
+            </div>
+          </article>
+
           {plannedWork.length > 0 && <div className="work-in-progress">
             <p className="work-in-progress-label">Work in progress</p>
             {plannedWork.map((project) => (

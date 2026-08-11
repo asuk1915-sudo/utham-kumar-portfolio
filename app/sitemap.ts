@@ -19,6 +19,30 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.8,
     },
+    {
+      url: `${baseUrl}/work/engineering-control-tower`,
+      lastModified: new Date("2026-08-10"),
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/work/ai-sdlc-governance`,
+      lastModified: new Date("2026-08-11"),
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/work/cyber-risk-command-center`,
+      lastModified: new Date("2026-08-11"),
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/work/engineering-experience-index`,
+      lastModified: new Date("2026-08-11"),
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
     ...insights.map((insight) => ({
       url: `${baseUrl}/insights/${insight.slug}`,
       lastModified: updated,
