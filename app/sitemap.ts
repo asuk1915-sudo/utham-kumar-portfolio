@@ -1,50 +1,49 @@
 import type { MetadataRoute } from "next";
 import { insights } from "@/data/content";
-
-const baseUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://uthamkumar.com";
+import { SITE_URL } from "./site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const updated = new Date("2026-08-09");
   return [
-    { url: baseUrl, lastModified: updated, changeFrequency: "monthly", priority: 1 },
+    { url: SITE_URL, lastModified: updated, changeFrequency: "monthly", priority: 1 },
     {
-      url: `${baseUrl}/work/release-intelligence`,
+      url: `${SITE_URL}/work/release-intelligence`,
       lastModified: updated,
       changeFrequency: "monthly",
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/work/dependency-intelligence`,
+      url: `${SITE_URL}/work/dependency-intelligence`,
       lastModified: new Date("2026-08-10"),
       changeFrequency: "monthly",
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/work/engineering-control-tower`,
+      url: `${SITE_URL}/work/engineering-control-tower`,
       lastModified: new Date("2026-08-10"),
       changeFrequency: "monthly",
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/work/ai-sdlc-governance`,
+      url: `${SITE_URL}/work/ai-sdlc-governance`,
       lastModified: new Date("2026-08-11"),
       changeFrequency: "monthly",
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/work/cyber-risk-command-center`,
+      url: `${SITE_URL}/work/cyber-risk-command-center`,
       lastModified: new Date("2026-08-11"),
       changeFrequency: "monthly",
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/work/engineering-experience-index`,
+      url: `${SITE_URL}/work/engineering-experience-index`,
       lastModified: new Date("2026-08-11"),
       changeFrequency: "monthly",
       priority: 0.8,
     },
     ...insights.map((insight) => ({
-      url: `${baseUrl}/insights/${insight.slug}`,
+      url: `${SITE_URL}/insights/${insight.slug}`,
       lastModified: updated,
       changeFrequency: "yearly" as const,
       priority: 0.6,

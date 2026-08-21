@@ -1,6 +1,50 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { insights } from "@/data/content";
+import {
+  HOME_DESCRIPTION,
+  IDENTITY_PROFILES,
+  PERSON_NAME,
+  PROFESSIONAL_PROFILE_URL,
+  SITE_URL,
+} from "./site";
+
+export const metadata: Metadata = {
+  alternates: { canonical: SITE_URL },
+};
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": `${SITE_URL}/#website`,
+      url: SITE_URL,
+      name: "Utham Kumar Technology Portfolio",
+      description: HOME_DESCRIPTION,
+      inLanguage: "en-US",
+      about: { "@id": `${SITE_URL}/#person` },
+    },
+    {
+      "@type": "Person",
+      "@id": `${SITE_URL}/#person`,
+      name: PERSON_NAME,
+      url: SITE_URL,
+      jobTitle: "Technology Program & Product Leader",
+      homeLocation: { "@type": "Place", name: "Atlanta, Georgia" },
+      sameAs: IDENTITY_PROFILES,
+      knowsAbout: [
+        "Technology program management",
+        "Product leadership",
+        "Engineering delivery",
+        "AI-driven secure computing systems",
+        "Cloud architecture",
+        "Digital payments",
+      ],
+    },
+  ],
+};
 
 const plannedWork: Array<{ number: string; title: string; status: string; summary: string }> = [];
 
@@ -55,6 +99,10 @@ const research = [
 export default function Home() {
   return (
     <main>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData).replace(/</g, "\\u003c") }}
+      />
       <header className="site-header">
         <Link className="identity" href="/" aria-label="Utham Kumar home">
           <span>Utham Kumar</span>
@@ -74,7 +122,7 @@ export default function Home() {
 
       <section className="hero section-shell" aria-labelledby="intro-title">
         <div className="hero-main">
-          <span className="eyebrow">Utham Kumar · Atlanta, Georgia</span>
+          <span className="eyebrow">Utham Kumar Anugula Sethupathy · Atlanta, Georgia</span>
           <h1 id="intro-title">I help engineering organizations turn complexity into <em>confident execution.</em></h1>
         </div>
         <div className="hero-intro">
@@ -84,6 +132,7 @@ export default function Home() {
           <div className="hero-links">
             <a href="#work">View selected work ↓</a>
             <a href="mailto:info@uthamkumar.info">info@uthamkumar.info ↗</a>
+            <a href={PROFESSIONAL_PROFILE_URL} target="_blank" rel="me noreferrer">Professional Profile ↗</a>
           </div>
         </div>
       </section>

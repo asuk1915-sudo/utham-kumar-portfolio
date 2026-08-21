@@ -1,25 +1,28 @@
 import type { Metadata, Viewport } from "next";
-import { headers } from "next/headers";
 import "./globals.css";
+import { HOME_DESCRIPTION, HOME_TITLE, PERSON_NAME, PROFESSIONAL_PROFILE_URL, SITE_URL } from "./site";
 
 export const viewport: Viewport = { themeColor: "#f4f1ea", colorScheme: "light" };
 
-export async function generateMetadata(): Promise<Metadata> {
-  const requestHeaders = await headers();
-  const host = requestHeaders.get("x-forwarded-host") ?? requestHeaders.get("host") ?? "localhost:3000";
-  const protocol = requestHeaders.get("x-forwarded-proto") ?? (host.includes("localhost") ? "http" : "https");
-  const origin = `${protocol}://${host}`;
-  const title = "Utham Kumar | Technology Program & Product Leader";
-  const description = "The portfolio of Utham Kumar, a technology program and product leader working across AI-driven secure computing systems, cloud architecture, engineering delivery, and digital payments.";
-  return {
-    title,
-    description,
-    applicationName: "Utham Kumar Portfolio",
-    keywords: ["technology program management", "product leadership", "engineering delivery", "AI-driven secure computing systems", "cloud architecture", "digital payments"],
-    openGraph: { title, description, type: "website", images: [{ url: `${origin}/og.png`, width: 1536, height: 1024, alt: "Utham Kumar, Technology Program and Product Leader" }] },
-    twitter: { card: "summary_large_image", title, description, images: [`${origin}/og.png`] },
-  };
-}
+export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
+  title: HOME_TITLE,
+  description: HOME_DESCRIPTION,
+  applicationName: `${PERSON_NAME} Technology Portfolio`,
+  authors: [{ name: PERSON_NAME, url: PROFESSIONAL_PROFILE_URL }],
+  creator: PERSON_NAME,
+  keywords: ["technology program management", "product leadership", "engineering delivery", "AI-driven secure computing systems", "cloud architecture", "digital payments"],
+  openGraph: {
+    title: HOME_TITLE,
+    description: HOME_DESCRIPTION,
+    url: SITE_URL,
+    siteName: "Utham Kumar Technology Portfolio",
+    locale: "en_US",
+    type: "website",
+    images: [{ url: "/og.png", width: 1536, height: 1024, alt: `${PERSON_NAME}, Technology Program and Product Leader` }],
+  },
+  twitter: { card: "summary_large_image", title: HOME_TITLE, description: HOME_DESCRIPTION, images: ["/og.png"] },
+};
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return <html lang="en" id="top"><body>{children}</body></html>;
